@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -1 --ignore=*.[^/]* -a | awk '$1 ~ /^[0-9]/ || $1 ~ /[a-zA-Z]/ { print $0 }' | sort -k1.1 | tr '\n' ',' | sed 's/,$/\n/'
+ls -A | sort -t/ -k1,1 | tr '\n' ',' | sed 's/,$/\n/'
