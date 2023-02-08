@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -1 | sort -t. -k1,1 -k2,2n | awk '/^\./ {printf $0 "/,"} /^[^\.]/ {printf $0 ","} END {printf "\n"}'
+ls -1 | sort -t. -k1,1 -k2,2n | awk '/^\./ {printf $0 "/,"} /^[^\.]/ {printf $0 " ,"} END {printf "\n"}'
