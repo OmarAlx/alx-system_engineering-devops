@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-printf "%s\n" "0 string SCHOOL School data file"
+0 string SCHOOL School data file
