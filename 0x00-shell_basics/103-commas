@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -1 | sort -t . -k 1,1 -k 2n | awk -v ORS=',\n' '{if ($1 == ".") printf("%s%s", $0, ORS); else if ($1 == "..") printf("%s%s", $0, ORS); else if (NF == 1) printf("%s/%s", $0, ORS); else printf("%s%s", $0, ORS)}' | sed '$s/.$/\n/'`
+ls -1 --ignore=*.[^/]* -a | awk '$1 ~ /^[0-9]/ || $1 ~ /[a-zA-Z]/ { print $0 }' | sort -k1.1 | tr '\n' ',' | sed 's/,$/\n/'
